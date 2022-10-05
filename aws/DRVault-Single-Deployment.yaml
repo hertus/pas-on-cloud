@@ -439,6 +439,16 @@ Resources:
       Tags:
         - Key: Name
           Value: !Sub '${VaultInstanceName}'
+        - Key: chkp:aws:to:internet:web
+          Value: allow
+        - Key: chkp:aws:to:meta-intg:ldaps
+          Value: allow
+        - Key: chkp:aws:to:mailhost:smtps
+          Value: allow
+        - Key: chkp:aws:to:vault:privateark
+          Value: allow  
+        - Key: chkp:aws:from:all-admin-clients:rdp
+          Value: allow
       SecurityGroupIds: !Ref 'VaultInstanceSecurityGroups'
       BlockDeviceMappings:
         - DeviceName: "/dev/sda1"
